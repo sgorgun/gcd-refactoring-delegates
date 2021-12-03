@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Gcd.Version_1.GcdImplementations;
 using Gcd.Version_1.Interface;
@@ -163,108 +163,22 @@ namespace Gcd.Version_1.StaticClasses
 
         private static int Gcd(Algorithm algorithm, int first, int second, int third)
         {
-            int gcd;
-            if (first == 0 && second == 0)
-            {
-                gcd = algorithm.Calculate(second, third);
-            }
-            else
-            {
-                int gcdtwonumbers = algorithm.Calculate(first, second);
-                gcd = algorithm.Calculate(gcdtwonumbers, third);
-            }
-
-            return gcd;
+            throw new NotImplementedException();
         }
 
         private static int Gcd(Algorithm algorithm, out long milliseconds, int first, int second, int third)
         {
-            int gcd;
-            long time;
-            milliseconds = 0;
-            if (first == 0 && second == 0)
-            {
-                gcd = algorithm.Calculate(second, third, out time);
-            }
-            else
-            {
-                int gcdtwonumbers = algorithm.Calculate(first, second, out time);
-                milliseconds += time;
-                gcd = algorithm.Calculate(gcdtwonumbers, third, out time);
-            }
-
-            milliseconds += time;
-            return gcd;
+            throw new NotImplementedException();
         }
 
         private static int Gcd(Algorithm algorithm, int first, int second, params int[] numbers) 
         {
-            List<int> otherWithoutZero = new List<int>();
-            int gcd = 0;
-
-            foreach (int n in numbers)
-            {
-                if (n != 0)
-                {
-                    otherWithoutZero.Add(n);
-                }
-            }
-
-            if (first != 0 || second != 0)
-            {
-                gcd = algorithm.Calculate(first, second);
-            }
-            else
-            {
-                if (otherWithoutZero.Count == 0)
-                {
-                    throw new ArgumentException("All numbers cannot be 0 at the same time.");
-                }
-            }
-
-            for (int j = 0; j < otherWithoutZero.Count; j++)
-            {
-                gcd = algorithm.Calculate(otherWithoutZero[j], gcd);
-            }
-
-            return gcd;
+            throw new NotImplementedException();
         }
 
         private static int Gcd(Algorithm algorithm, out long milliseconds, int first, int second, params int[] numbers)
         {
-            int gcd = 0;
-            long time;
-            milliseconds = 0;
-            List<int> otherWithoutZero = new List<int>();
-
-            foreach (int n in numbers)
-            {
-                if (n != 0)
-                {
-                    otherWithoutZero.Add(n);
-                }
-            }
-
-            if (first != 0 || second != 0)
-            {
-                gcd = algorithm.Calculate(first, second, out time);
-                milliseconds += time;
-            }
-            else
-            {
-                if (otherWithoutZero.Count == 0)
-                {
-                    throw new ArgumentException("All numbers cannot be 0 at the same time.");
-                }
-            }
-
-            for (int j = 0; j < otherWithoutZero.Count; j++)
-            {
-                gcd = algorithm.Calculate(otherWithoutZero[j], gcd, out time);
-                milliseconds += time;
-            }
-
-            return gcd;
+            throw new NotImplementedException();
         }
     }
 }

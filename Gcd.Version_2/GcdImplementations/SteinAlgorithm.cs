@@ -13,7 +13,7 @@ namespace Gcd.Version_2.GcdImplementations
         /// <exception cref="ArgumentOutOfRangeException">Thrown when one or two numbers are int.MinValue.</exception>
         public int Calculate(int first, int second)
         {
-            Gcd. Refactoring. Help
+            throw new NotImplementedException();
         }
     }
 }

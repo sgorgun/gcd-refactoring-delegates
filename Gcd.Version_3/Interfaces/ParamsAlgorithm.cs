@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-
-#pragma warning disable SA1300
 
 namespace Gcd.Version_3.Interfaces
 {
@@ -14,10 +11,11 @@ namespace Gcd.Version_3.Interfaces
         /// Initializes a new instance of the <see cref="ParamsAlgorithm"/> class.
         /// </summary>
         /// <param name="algorithm">Some algorithm.</param>
-        public ParamsAlgorithm(IAlgorithm algorithm) : base(algorithm)
+        public ParamsAlgorithm(IAlgorithm algorithm)
+            : base(algorithm)
         {
         }
-        
+
         /// <summary>
         /// Calculates GCD of two integers from [-int.MaxValue;int.MaxValue] by the algorithm.
         /// </summary>

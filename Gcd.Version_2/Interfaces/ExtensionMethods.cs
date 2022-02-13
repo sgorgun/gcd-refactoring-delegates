@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-
-#pragma warning disable SA1300
 
 namespace Gcd.Version_2.Interfaces
 {

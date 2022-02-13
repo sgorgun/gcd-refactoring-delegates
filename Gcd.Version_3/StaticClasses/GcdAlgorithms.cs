@@ -2,8 +2,6 @@
 using Gcd.Version_3.GcdImplementations;
 using Gcd.Version_3.Interfaces;
 
-#pragma warning disable SA1300
-
 namespace Gcd.Version_3.StaticClasses
 {
     /// <summary>
@@ -69,8 +67,7 @@ namespace Gcd.Version_3.StaticClasses
         /// <exception cref="ArgumentException">Thrown when all numbers are 0 at the same time.</exception>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when one or more numbers are int.MinValue.</exception>
         public static int GetGcdByEuclidean(out long milliseconds, int first, int second, int third)
-            => new TimerAlgorithm(new EuclideanAlgorithm()).GcdWithThreeParameters(out milliseconds, first, second,
-                third);
+            => new TimerAlgorithm(new EuclideanAlgorithm()).GcdWithThreeParameters(out milliseconds, first, second, third);
         
         /// <summary>
         /// Calculates the GCD of integers from [-int.MaxValue;int.MaxValue] by the Euclidean algorithm with milliseconds time.
@@ -84,7 +81,6 @@ namespace Gcd.Version_3.StaticClasses
         /// <exception cref="ArgumentOutOfRangeException">Thrown when one or more numbers are int.MinValue.</exception>
         public static int GetGcdByEuclidean(out long milliseconds, int first, int second, params int[] numbers)
             => new TimerAlgorithm(new EuclideanAlgorithm()).GcdWithParams(out milliseconds, first, second, numbers);
-
 
         /// <summary>
         /// Calculates GCD of two integers [-int.MaxValue;int.MaxValue] by the Stein algorithm.
@@ -158,24 +154,21 @@ namespace Gcd.Version_3.StaticClasses
         public static int GetGcdByStein(out long milliseconds, int first, int second, params int[] numbers)
             => GcdWithParams(new TimerAlgorithm(new SteinAlgorithm()), out milliseconds, first, second, numbers);
 
-        private static int GcdWithTwoParameters(this AlgorithmExtension algorithm, out long milliseconds, int first,
-            int second)
+        private static int GcdWithTwoParameters(this AlgorithmExtension algorithm, out long milliseconds, int first, int second)
         {
             int gcd = algorithm.Calculate(first, second);
             milliseconds = ((TimerAlgorithm)algorithm).Milliseconds;
             return gcd;
         }
 
-        private static int GcdWithThreeParameters(this AlgorithmExtension algorithm, out long milliseconds, int first,
-            int second, int third)
+        private static int GcdWithThreeParameters(this AlgorithmExtension algorithm, out long milliseconds, int first, int second, int third)
         {
             int gcd = algorithm.Calculate(first, second, third);
             milliseconds = ((TimerAlgorithm)algorithm).Milliseconds;
             return gcd;
         }
 
-        private static int GcdWithParams(this AlgorithmExtension algorithm, out long milliseconds, int first,
-            int second, int[] numbers)
+        private static int GcdWithParams(this AlgorithmExtension algorithm, out long milliseconds, int first, int second, int[] numbers)
         {
             int gcd = algorithm.Calculate(first, second, numbers);
             milliseconds = ((TimerAlgorithm)algorithm).Milliseconds;

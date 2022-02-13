@@ -1,6 +1,4 @@
-﻿#pragma warning disable SA1300
-
-namespace Gcd.Version_2.Interfaces
+﻿namespace Gcd.Version_2.Interfaces
 {
     /// <summary>
     /// Calculates the GCD of integers [-int.MaxValue;int.MaxValue].

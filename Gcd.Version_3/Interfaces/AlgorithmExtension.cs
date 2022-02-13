@@ -14,6 +14,7 @@ namespace Gcd.Version_3.Interfaces
         {
             this.algorithm = algorithm ?? throw new ArgumentNullException(nameof(algorithm));
         }
+        
         public abstract int Calculate(int first, int second);
 
         public abstract int Calculate(int first, int second, int third);

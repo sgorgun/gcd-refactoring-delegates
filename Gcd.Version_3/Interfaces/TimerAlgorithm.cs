@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-
-#pragma warning disable SA1300
 
 namespace Gcd.Version_3.Interfaces
 {
@@ -15,7 +11,8 @@ namespace Gcd.Version_3.Interfaces
         /// Initializes a new instance of the <see cref="TimerAlgorithm"/> class.
         /// </summary>
         /// <param name="algorithm">Some algorithm.</param>
-        public TimerAlgorithm(IAlgorithm algorithm) : base(algorithm)
+        public TimerAlgorithm(IAlgorithm algorithm)
+            : base(algorithm)
         {
         }
 

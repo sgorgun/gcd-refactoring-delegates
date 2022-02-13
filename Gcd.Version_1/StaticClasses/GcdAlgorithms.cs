@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using Gcd.Version_1.GcdImplementations;
 using Gcd.Version_1.Interface;
 

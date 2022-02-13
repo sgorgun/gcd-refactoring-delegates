@@ -1,8 +1,6 @@
 using System;
 using Gcd.Version_2.Interfaces;
 
-#pragma warning disable SA1300
-
 namespace Gcd.Version_2.GcdImplementations
 {
     /// <inheritdoc/>

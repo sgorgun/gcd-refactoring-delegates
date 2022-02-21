@@ -1,6 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
-using static Gcd.Version_3.StaticClasses.GcdAlgorithms;
+using static Gcd.Version_2.StaticClasses.GcdAlgorithms;
 
 namespace Gcd.Tests.Gcd.Version._2
 {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Gcd.Version_2.Interfaces
+namespace Gcd.Version_4.GcdImplementations
 {
     /// <summary>
     /// Implementation extension methods.
@@ -15,7 +15,7 @@ namespace Gcd.Version_2.Interfaces
         /// <param name="second">Second integer.</param>
         /// <param name="third">Third integer.</param>
         /// <returns>The GCD value.</returns>
-        internal static int FindGcdWithThreeParameters(this IAlgorithm algorithm, int first, int second, int third)
+        internal static int FindGcdWithThreeParameters(this Func<int, int, int> algorithm, int first, int second, int third)
         {
             throw new NotImplementedException();
         }
@@ -28,7 +28,7 @@ namespace Gcd.Version_2.Interfaces
         /// <param name="second">Second integer.</param>
         /// <param name="numbers">Other integers.</param>
         /// <returns>The GCD value.</returns>
-        internal static int FindGcdAlgorithm(this IAlgorithm algorithm, int first, int second, params int[] numbers)
+        internal static int FindGcdAlgorithm(this Func<int, int, int> algorithm, int first, int second, params int[] numbers)
         {
             throw new NotImplementedException();
         }
@@ -41,7 +41,7 @@ namespace Gcd.Version_2.Interfaces
         /// <param name="second">Second integer.</param> 
         /// <param name="milliseconds">Method execution time in milliseconds.</param>
         /// <returns>The GCD value.</returns>
-        internal static int FindGcdWithTimeWorkingAlgorithm(this IAlgorithm algorithm, int first, int second, out long milliseconds)
+        internal static int FindGcdWithTimeWorkingAlgorithm(this Func<int, int, int> algorithm, int first, int second, out long milliseconds)
         {
             throw new NotImplementedException();
         }
@@ -55,7 +55,7 @@ namespace Gcd.Version_2.Interfaces
         /// <param name="third">Third integer.</param>      
         /// <param name="milliseconds">Method execution time in milliseconds.</param>
         /// <returns>The GCD value.</returns>
-        internal static int FindGcdWithThreeParametersTimeWorkingAlgorithm(this IAlgorithm algorithm, int first, int second, int third, out long milliseconds)
+        internal static int FindGcdWithThreeParametersTimeWorkingAlgorithm(this Func<int, int, int> algorithm, int first, int second, int third, out long milliseconds)
         {
             throw new NotImplementedException();
         }
@@ -69,7 +69,7 @@ namespace Gcd.Version_2.Interfaces
         /// <param name="milliseconds">Method execution time in milliseconds.</param>
         /// <param name="numbers">Other integers.</param>        
         /// <returns>The GCD value.</returns>
-        internal static int FindGcdWithParamsAndTimeWorkingAlgorithm(this IAlgorithm algorithm, int first, int second, out long milliseconds, params int[] numbers)
+        internal static int FindGcdWithParamsAndTimeWorkingAlgorithm(this Func<int, int, int> algorithm, int first, int second, out long milliseconds, params int[] numbers)
         {
             throw new NotImplementedException();
         }

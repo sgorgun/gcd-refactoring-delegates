@@ -27,8 +27,6 @@
         </PackageReference>
     </ItemGroup>
     <ItemGroup>
-      <ProjectReference Include="..\Gcd.Version_1\Gcd.Version_1.csproj" />
-      <ProjectReference Include="..\Gcd.Version_2\Gcd.Version_2.csproj" />
-      <ProjectReference Include="..\Gcd.Version_3\Gcd.Version_3.csproj" />
+      <ProjectReference Include="..\Gcd.Version_4\Gcd.Version_4.csproj" />
     </ItemGroup>
 </Project>

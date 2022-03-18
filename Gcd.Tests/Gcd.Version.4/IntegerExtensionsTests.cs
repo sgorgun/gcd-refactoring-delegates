@@ -1,8 +1,8 @@
 ﻿using System;
 using NUnit.Framework;
-using static Gcd.Version_2.StaticClasses.GcdAlgorithms;
+using static Gcd.Version_4.StaticClasses.GcdAlgorithms;
 
-namespace Gcd.Tests.Gcd.Version._2
+namespace Gcd.Tests.Gcd.Version._4
 {
     public class IntegerExtensionsTests
     {

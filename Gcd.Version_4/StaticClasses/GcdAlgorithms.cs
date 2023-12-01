@@ -39,9 +39,9 @@ namespace Gcd.Version_4.StaticClasses
         /// <returns>The GCD value.</returns>
         /// <exception cref="ArgumentException">Thrown when all numbers are 0 at the same time.</exception>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when one or more numbers are int.MinValue.</exception>
-        public static int GetGcdByEuclidean(int first, int second, params int[] numbers) => throw new NotImplementedException();
+        public static int GetGcdByEuclidean(int first, int second, params int[] numbers) => new Func<int, int, int>(new EuclideanAlgorithm().Calculate).FindGcdAlgorithm(first, second, numbers);
 
-        /// <summary> 
+        /// <summary>
         /// Calculates GCD of two integers from [-int.MaxValue;int.MaxValue] by the Euclidean algorithm with milliseconds time.
         /// </summary>
         /// <param name="milliseconds">Method execution time in milliseconds.</param>
@@ -50,7 +50,7 @@ namespace Gcd.Version_4.StaticClasses
         /// <returns>The GCD value.</returns>
         /// <exception cref="ArgumentException">Thrown when all numbers are 0 at the same time.</exception>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when one or two numbers are int.MinValue.</exception>
-        public static int GetGcdByEuclidean(out long milliseconds, int first, int second) => throw new NotImplementedException();
+        public static int GetGcdByEuclidean(out long milliseconds, int first, int second) => new Func<int, int, int>(new EuclideanAlgorithm().Calculate).FindGcdWithTimeWorkingAlgorithm(first, second, out milliseconds);
 
         /// <summary>
         /// Calculates GCD of three integers from [-int.MaxValue;int.MaxValue] by the Euclidean algorithm with milliseconds time.
@@ -62,7 +62,7 @@ namespace Gcd.Version_4.StaticClasses
         /// <returns>The GCD value.</returns>
         /// <exception cref="ArgumentException">Thrown when all numbers are 0 at the same time.</exception>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when one or more numbers are int.MinValue.</exception>
-        public static int GetGcdByEuclidean(out long milliseconds, int first, int second, int third) => throw new NotImplementedException();
+        public static int GetGcdByEuclidean(out long milliseconds, int first, int second, int third) => new Func<int, int, int>(new EuclideanAlgorithm().Calculate).FindGcdWithThreeParametersTimeWorkingAlgorithm(first, second, third, out milliseconds);
 
         /// <summary>
         /// Calculates the GCD of integers from [-int.MaxValue;int.MaxValue] by the Euclidean algorithm with milliseconds time.
@@ -74,7 +74,7 @@ namespace Gcd.Version_4.StaticClasses
         /// <returns>The GCD value.</returns>
         /// <exception cref="ArgumentException">Thrown when all numbers are 0 at the same time.</exception>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when one or more numbers are int.MinValue.</exception>
-        public static int GetGcdByEuclidean(out long milliseconds, int first, int second, params int[] numbers) => throw new NotImplementedException();
+        public static int GetGcdByEuclidean(out long milliseconds, int first, int second, params int[] numbers) => new Func<int, int, int>(new EuclideanAlgorithm().Calculate).FindGcdWithParamsAndTimeWorkingAlgorithm(first, second, out milliseconds, numbers);
 
         /// <summary>
         /// Calculates GCD of two integers [-int.MaxValue;int.MaxValue] by the Stein algorithm.
@@ -107,7 +107,7 @@ namespace Gcd.Version_4.StaticClasses
         /// <returns>The GCD value.</returns>
         /// <exception cref="ArgumentException">Thrown when all numbers are 0 at the same time.</exception>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when one or more numbers are int.MinValue.</exception>
-        public static int GetGcdByStein(int first, int second, params int[] numbers) => throw new NotImplementedException();
+        public static int GetGcdByStein(int first, int second, params int[] numbers) => new Func<int, int, int>(new SteinAlgorithm().CalculateGcd).FindGcdAlgorithm(first, second, numbers);
 
         /// <summary>
         /// Calculates GCD of two integers from [-int.MaxValue;int.MaxValue] by the Euclidean algorithm with milliseconds time.
@@ -118,7 +118,7 @@ namespace Gcd.Version_4.StaticClasses
         /// <returns>The GCD value.</returns>
         /// <exception cref="ArgumentException">Thrown when all numbers are 0 at the same time.</exception>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when one or two numbers are int.MinValue.</exception>
-        public static int GetGcdByStein(out long milliseconds, int first, int second) => throw new NotImplementedException();
+        public static int GetGcdByStein(out long milliseconds, int first, int second) => new Func<int, int, int>(new SteinAlgorithm().CalculateGcd).FindGcdWithTimeWorkingAlgorithm(first, second, out milliseconds);
 
         /// <summary>
         /// Calculates GCD of three integers from [-int.MaxValue;int.MaxValue] by the Euclidean algorithm with milliseconds time.
@@ -130,7 +130,7 @@ namespace Gcd.Version_4.StaticClasses
         /// <returns>The GCD value.</returns>
         /// <exception cref="ArgumentException">Thrown when all numbers are 0 at the same time.</exception>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when one or more numbers are int.MinValue.</exception>
-        public static int GetGcdByStein(out long milliseconds, int first, int second, int third) => throw new NotImplementedException();
+        public static int GetGcdByStein(out long milliseconds, int first, int second, int third) => new Func<int, int, int>(new SteinAlgorithm().CalculateGcd).FindGcdWithThreeParametersTimeWorkingAlgorithm(first, second, third, out milliseconds);
 
         /// <summary>
         /// Calculates the GCD of integers from [-int.MaxValue;int.MaxValue] by the Euclidean algorithm with milliseconds time.
@@ -142,6 +142,6 @@ namespace Gcd.Version_4.StaticClasses
         /// <returns>The GCD value.</returns>
         /// <exception cref="ArgumentException">Thrown when all numbers are 0 at the same time.</exception>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when one or more numbers are int.MinValue.</exception>
-        public static int GetGcdByStein(out long milliseconds, int first, int second, params int[] numbers) => throw new NotImplementedException();
+        public static int GetGcdByStein(out long milliseconds, int first, int second, params int[] numbers) => new Func<int, int, int>(new SteinAlgorithm().CalculateGcd).FindGcdWithParamsAndTimeWorkingAlgorithm(first, second, out milliseconds, numbers);
     }
 }

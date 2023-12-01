@@ -17,7 +17,32 @@ namespace Gcd.Version_4.GcdImplementations
         /// <exception cref="ArgumentOutOfRangeException">Thrown when one or two numbers are int.MinValue.</exception>
         public int CalculateGcd(int first, int second)
         {
-            throw new NotImplementedException();
+            if (first == 0 && second == 0)
+            {
+                throw new ArgumentException("All arguments cannot be zero.(6)");
+            }
+
+            if (first == int.MinValue || second == int.MinValue)
+            {
+                throw new ArgumentOutOfRangeException($"One or two numbers are { int.MinValue}.");
+            }
+
+            first = first < 0 ? -first : first;
+            second = second < 0 ? -second : second;
+
+            while (first != 0 && second != 0)
+            {
+                if (first > second)
+                {
+                    first %= second;
+                }
+                else
+                {
+                    second %= first;
+                }
+            }
+
+            return first == 0 ? second : first;
         }
     }
 }

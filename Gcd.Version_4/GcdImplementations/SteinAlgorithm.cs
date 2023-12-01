@@ -1,4 +1,5 @@
-﻿using System;
+﻿#pragma warning disable CA1822
+using System;
 
 namespace Gcd.Version_4.GcdImplementations
 {
@@ -24,7 +25,7 @@ namespace Gcd.Version_4.GcdImplementations
 
             if (first == int.MinValue || second == int.MinValue)
             {
-                throw new ArgumentOutOfRangeException($"One or two numbers are { int.MinValue}.");
+                throw new ArgumentOutOfRangeException($"One or two numbers are {int.MinValue}.");
             }
 
             first = first < 0 ? -first : first;

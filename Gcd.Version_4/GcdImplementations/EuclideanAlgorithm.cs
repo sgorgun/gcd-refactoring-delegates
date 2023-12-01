@@ -1,4 +1,5 @@
-﻿using System;
+﻿#pragma warning disable CA1822
+using System;
 
 namespace Gcd.Version_4.GcdImplementations
 {

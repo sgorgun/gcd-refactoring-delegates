@@ -1,4 +1,5 @@
-﻿using System;
+﻿#pragma warning disable CA1707, CA1062
+using System;
 using Gcd.Version_4.GcdImplementations;
 
 namespace Gcd.Version_4.StaticClasses
